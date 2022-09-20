@@ -41,7 +41,7 @@ public class DelegatesTests
         string inputString = " 0048";
         int inputInt = 48;
         
-        var lambda = (string x, int y) => int.Parse(inputString) == inputInt;
+        var lambda = (string x, int y) => int.Parse(x) == y;
         //Act
         var actual = lambda(inputString, inputInt);
         var expected = true;
@@ -57,7 +57,7 @@ public class DelegatesTests
         string inputString = " 0127";
         int inputInt = 48;
         
-        var lambda = (string x, int y) => int.Parse(inputString) == inputInt;
+        var lambda = (string x, int y) => int.Parse(x) == y;
         //Act
         var actual = lambda(inputString, inputInt);
         var expected = false;
